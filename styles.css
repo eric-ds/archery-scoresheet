@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+body {
+  display: grid;
+  grid-template-areas: "header header"
+                       "aside content"
+                       "footer footer";
+  grid-template-columns: 17vh 1fr;
+  grid-template-rows: 7.5vh 85vh 7.5vh;
+  margin: auto;
+  max-width: 65vh;
+  max-height: 100vh;
+  border: 1px solid black;
+}
+header {
+  grid-area: header;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+}
+header label {
+  display: block;
+  height: 100%;
+  width: 30%;
+  align-items: center;
+  font-size: 5vh;
+}
+header label:hover {
+  cursor: pointer;
+}
+header label:nth-of-type(1) {
+  border-right: 2px solid black;
+}
+header label:nth-of-type(2) {
+  border-left: 2px solid black;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + label{
+  background-color: yellow;
+}
+header h1 {
+  width: 40%;
+}
+content {
+  box-sizing: border-box;
+  grid-area: content;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+}
+footer {
+  grid-area: footer;
+  text-align: center;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+h2 {
+  padding: .5vh;
+  font-size: 4vh;
+  width: 100%;
+  border: 1px
+}
+input[type="button"] {
+  white-space: normal;
+/*   box-sizing: content-box; */
+}
+input[type="text"] {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+input[type="text"]:focus {
+  background-color: yellow;
+  outline: none;
+}
+input:hover {
+  cursor: pointer;
+}
+.end {
+  display: flex;
+  justify-content: stretch;
+}
+input, .endScore, .gameScore, .label{
+  width: 5vh;
+  height: 5vh;
+  text-align: center;
+  font-size: 3vh;
+  border: 1px solid black;
+  line-height: 4vh;
+}
+.endScore, .label, .gameScore{
+  background-color: #BCBCBC;
+}
+.label, .gameScore{
+  width: 15vh;
+}
+.label {
+  float: left;
+  text-align: right;
+  padding-right: 5px;
+}
+.gameScore {
+  float: right;
+}
+#x, #five, #four, #zero {
+  font-size: 11vh;
+}
+#del {
+  font-size: 4vh;
+}
+
+.score-btn, .scorebox, .vertical-text {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.game {
+  border: 1px solid black;
+}
+
+.wrapper {
+  width: 90%;
+  height: 18%;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.wrapper:active {
+  background-color: yellow;
+}
+
+.arrow:focus {
+  background-color: yellow;
+}
