@@ -102,6 +102,18 @@ function toggleScores() {
 		}
 	}
 }
+function clearArrows() {
+	for (let i = 0; i < arrows.length; i++){
+		arrows[i].value = "";
+	}
+}
+function setScoring(){
+	if (document.getElementById(scores[0].htmlFor).checked) {
+		scoring = "300";
+	} else {
+		scoring = "360";
+	}
+}
 
 for (let i = 0; i < arrows.length; i++) {
 	arrows[i].addEventListener('focus', (event) => {
@@ -134,11 +146,6 @@ for (let i = 0; i < scores.length; i++) {
 arrows[arrow].focus();
 total.points = 0;
 total.x = 0;
+clearArrows();
+setScoring();
 updateGameText(total);
-
-
-
-
-
-
-

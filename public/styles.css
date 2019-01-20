@@ -29,6 +29,7 @@ header label {
   width: 30%;
   align-items: center;
   font-size: 5vh;
+  line-height: 6.5vh;
 }
 header label:hover {
   cursor: pointer;
@@ -82,7 +83,6 @@ h2 {
 }
 input[type="button"] {
   white-space: normal;
-/*   box-sizing: content-box; */
 }
 input[type="text"] {
   color: transparent;
@@ -120,6 +120,7 @@ input, .endScore, .gameScore, .label{
 }
 .gameScore {
   float: right;
+  text-align: center;
 }
 #x, #five, #four, #zero {
   font-size: 11vh;
@@ -127,29 +128,25 @@ input, .endScore, .gameScore, .label{
 #del {
   font-size: 4vh;
 }
-
-.score-btn, .scorebox, .vertical-text {
+.score-btn, .vertical-text{
   display: block;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
-
 .game {
   border: 1px solid black;
+  margin: 5px;
 }
-
 .wrapper {
   width: 90%;
   height: 18%;
   text-align: center;
   border: 1px solid black;
 }
-
 .wrapper:active {
   background-color: yellow;
 }
-
 .arrow:focus {
   background-color: yellow;
 }
