@@ -1,7 +1,7 @@
 const games = document.querySelectorAll('.gameScore'); // 3 games per round
 const ends = document.querySelectorAll('.endScore'); // 4 ends per game
 const arrows = document.querySelectorAll('.arrow'); // 5 arrows per end
-const buttons = document.querySelectorAll(".wrapper");
+const buttons = document.querySelectorAll('.wrapper');
 const scores = document.querySelectorAll('label');
 const total = document.getElementById('total');
 let arrow = 0;
