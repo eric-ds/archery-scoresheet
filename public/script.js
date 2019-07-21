@@ -7,18 +7,27 @@ const total = document.getElementById('total');
 let arrow = 0;
 let scoring = "300";
 
+//gets the End Score determined by the arrow passed
 function getEndScore(arrow) {
 	return arrow.parentElement.lastElementChild;
 }
+
+//gets the Game Score determined by the arrow passed
 function getGameScore(arrow) {
 	return getEndScore(arrow).parentElement.parentElement.lastElementChild;
 }
+
+//updates the end text
 function updateEndText(end) {
 	end.innerText = end.points + "";
 };
+
+//updates the game text
 function updateGameText(game) {
 	game.innerText = game.points + " (" + game.x + "X)";
 };
+
+//catch all button click function
 function buttonClick(button) {
 	let target = arrow;
 	let isX = 0;
@@ -85,6 +94,8 @@ function buttonClick(button) {
 	//focus next arrow
 	arrows[nextTarget].focus();
 };
+
+//changes between scoring templates
 function toggleScores() {
 	let delta = (scoring === "300" ? -1 : 1);
 	for (let i = 0; i < arrows.length; i++) {
@@ -102,11 +113,15 @@ function toggleScores() {
 		}
 	}
 }
+
+//initializes the arrow values to ""
 function clearArrows() {
 	for (let i = 0; i < arrows.length; i++){
 		arrows[i].value = "";
 	}
 }
+
+//determines scoring from html document
 function setScoring(){
 	if (document.getElementById(scores[0].htmlFor).checked) {
 		scoring = "300";
@@ -115,6 +130,7 @@ function setScoring(){
 	}
 }
 
+//initialize arrow values
 for (let i = 0; i < arrows.length; i++) {
 	arrows[i].addEventListener('focus', (event) => {
 		arrow = i;
@@ -122,18 +138,26 @@ for (let i = 0; i < arrows.length; i++) {
 	arrows[i].points = 0;
 	arrows[i].isX = false;
 }//keep
+
+//initialize end values
 for (let i = 0; i < ends.length; i++) {
 	ends[i].points = 0;
 }
+
+//initialize game values
 for (let i = 0; i < games.length; i++) {
 	games[i].points = 0;
 	games[i].x = 0;
 }
+
+//add click listeners to buttons
 for (let i = 0; i < buttons.length; i++) {
 	buttons[i].addEventListener('click', (event) => {
 		buttonClick(buttons[i]);
 	});
 }
+
+//sets scoring template
 for (let i = 0; i < scores.length; i++) {
 	scores[i].addEventListener('click', (event) => {
 		if (scoring !== scores[i].innerText) {
