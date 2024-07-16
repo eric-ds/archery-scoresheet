@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', cursive;
+  /* border: 1px solid black; */
+}
+body {
+  display: grid;
+  grid-template-areas: "header"
+                       "content"
+                       "footer"
+                       "aside";
+  /* grid-template-columns: 17vh 1fr; 
+  grid-template-rows: 10% 50% 10% 30%;
+  margin: auto;
+  width: 66vh;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+header {
+  grid-area: header;
+  text-align: center;
+  background-color: lightgray;
+}
+header a {
+  width: 55vh;
+  background-color: blue;
+  display: none;
+}
+header label {
+  display: block;
+  height: 100%;
+  width: 30%;
+  align-items: center;
+  font-size: 5vh;
+  line-height: 6.5vh;
+}
+header h1 {
+  width: 100%;
+}
+#config1 {
+  grid-area: config;
+  /* display: grid; */
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  /* border: 2px dashed black; */
+  margin: 0 auto;
+  padding: 10px;
+}
+#config1 label {
+  justify-self: end;
+}
+#config1  input {
+  justify-self: start;
+}
+
+content {
+  box-sizing: border-box;
+  grid-area: content;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: lightgray;
+}
+aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: row;WsacPatw~22
+  justify-content: space-around;
+  align-items: center;
+  background-color: lightgray;
+  /* border: 1px solid black; */
+}
+footer {
+  grid-area: footer;
+  text-align: center;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: lightgray;
+}
+h2 {
+  padding: .5vh;
+  font-size: 4vh;
+  width: 100%;
+  border: 1px
+}
+input[type="button"] {
+  white-space: normal;
+}
+input[type="text"] {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+input[type="number"] {
+  width: 4em;
+  text-align: center;
+}
+input[type="text"]:focus {
+  background-color: yellow;
+  outline: none;
+}
+input:hover {
+  cursor: pointer;
+}
+.end {
+  display: flex;
+  justify-content: stretch;
+}
+input.arrow, .endScore, .gameScore, .label{
+  width: 5vh;
+  height: 5vh;
+  text-align: center;
+  font-size: 3vh;
+  border: 1px solid black;
+  line-height: 5vh;
+}
+.endScore, .label, .gameScore{
+  background-color: #BCBCBC;
+}
+.label, .gameScore{
+  width: 15vh;
+}
+.label {
+  float: left;
+  text-align: right;
+  padding-right: 5px;
+}
+.gameScore {
+  float: right;
+  text-align: center;
+}
+
+#d {
+  font-size: 4vh;
+}
+.score-btn, .vertical-text{
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.game {
+  border: 1px solid black;
+  margin: 5px;
+}
+.wrapper {
+  font-size: 11vh;
+  width: 90%;
+  height: 18%;
+  text-align: center;
+  border: 1px solid black;
+}
+.wrapper:active {
+  background-color: yellow;
+}
+.arrow:focus {
+  background-color: yellow;
+}
